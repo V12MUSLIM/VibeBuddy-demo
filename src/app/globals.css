@@ -1,26 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.composer-textarea {
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 24%) transparent;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.composer-textarea::-webkit-scrollbar {
+  width: 6px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.composer-textarea::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.composer-textarea::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgb(255 255 255 / 24%);
+}
+
+.composer-textarea::-webkit-scrollbar-thumb:hover {
+  background: rgb(255 255 255 / 42%);
 }
